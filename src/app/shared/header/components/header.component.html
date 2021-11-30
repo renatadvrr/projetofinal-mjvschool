@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="top-header">
+      <span>(31) 9 9999-9999</span>
+      <span>sac@organico.com</span>
+      <span>Seg à Sex das 9h às 18h</span>
+  </div>
+  <mat-toolbar class="menu">
+    <p class="logo" [routerLink]='["home"]'><span class="verde">Da'</span>Roça</p>
+    <ul class="nav-menu">
+      <a mat-button [routerLink]='["produtos"]' *ngIf="usuario">Produtos</a>
+      <a mat-button [routerLink]='["produtores"]' *ngIf="usuario">Podutores</a>
+      
+    </ul>
+    <ul class="nav-menu-2">
+      <a mat-button class="login" (click)="exit()" *ngIf="usuario">Sair</a>
+      <a mat-button [routerLink]='["creatAccount"]' *ngIf="!usuario">Cadastre-se</a>
+      <a mat-button class="login" [routerLink]='["login"]' *ngIf="!usuario">Login</a>
+    </ul>
+  </mat-toolbar>
+</div>

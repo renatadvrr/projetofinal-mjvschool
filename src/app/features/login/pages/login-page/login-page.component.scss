@@ -1,0 +1,37 @@
+.body {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    background: #f7f9f9;
+    max-height: calc(100% - 18.2%);
+    margin: 0;
+    padding: 0 40px;
+}
+.login {
+    box-shadow: 3px 3px 10px #b1b1b1;
+    border-radius: 15px;
+    padding: 30px 0;
+    width: 100%;
+    max-width: 330px;
+    text-align: center;
+    margin: 0 0 0 10px;
+}
+.login img{
+    height: 100px;
+}
+.login h1 {
+    
+    color: #2e2e2e;
+}
+.largura {
+    width: 80%;
+}
+
+button {
+    background: #7cad00;
+    width: 100%;
+    max-width: 262px;
+    color: #f7f9f9;
+    margin-top: 30px;
+}

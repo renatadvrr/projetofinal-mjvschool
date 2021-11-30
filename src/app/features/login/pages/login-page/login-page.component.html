@@ -1,0 +1,25 @@
+<div class="body">
+    <div class="login">
+        <img src="./assets/image/login.png" alt="">
+        <h1>Login</h1>
+        <form #loginForm="ngForm" class="login-form">
+            <mat-form-field class="largura" appearance="legacy">
+                <mat-label>Digite seu email</mat-label>
+                <input matInput type="text" [(ngModel)]="email" placeholder="Placeholder" name="email" required>
+
+            </mat-form-field>
+
+            <mat-form-field class="largura" appearance="legacy">
+                <mat-label>Digite sua senha</mat-label>
+                <input matInput type="password" [(ngModel)]="password" placeholder="Digite sua senha" name="password"
+                    required>
+            </mat-form-field>
+
+            <p class="error" *ngIf="error"> Usuário ou senha inválidos, tente novamente!</p>
+        </form>
+        <div class="example-button-row">
+            <button mat-raised-button type="button" (click)="authenticate()"
+                [disabled]="!loginForm.valid">Entrar</button>
+        </div>
+    </div>
+</div>

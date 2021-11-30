@@ -1,0 +1,26 @@
+<mat-card class="example-card">
+    <mat-card-header>
+    
+      <mat-card-title>{{usuario?.nome}}</mat-card-title>
+      <mat-card-subtitle>
+        <!-- <p>Produtor de {{usuario?.produto}}</p> -->
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <h3>Esse produtor é da região de: {{usuario?.city}}</h3>
+
+      <div>
+        <h3>Contato: </h3> 
+        <span>{{usuario?.email}}</span><br>
+        <span>{{usuario?.cel | phone}}</span>
+      </div><br>
+      puxar dados do produto
+      <!-- <p>Produto: {{usuario?.produto}}</p> -->
+      <!-- <p>Quantidade: {{usuario?.quantidade}} {{usuario?.unidade}} -->
+      <!-- </p> -->
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>ENTRE EM CONTATO</button>
+    </mat-card-actions>
+  </mat-card>
+  
