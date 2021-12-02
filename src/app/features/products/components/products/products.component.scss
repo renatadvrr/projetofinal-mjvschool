@@ -3,14 +3,13 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 80px;
+    
 }
 .example-card {
-    max-width: 300px;
-    margin: 40px 0;
-  }
-  .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
+    width: 300px;
+    margin: 20px 0;
+    padding: 20px;
+    
   }
   .buttom {
       background: #fff;

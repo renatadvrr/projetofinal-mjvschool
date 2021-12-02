@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Products } from '../../models/products.model';
+import {Location} from '@angular/common';
+
 
 @Component({
   selector: 'app-products',
@@ -15,13 +17,20 @@ export class ProductsComponent implements OnInit {
   @Input()
   products?: Products;
   
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private _location: Location) { }
 
   ngOnInit(): void {
   }
 
   productDetails() {
   this.router.navigateByUrl(`produtos-details/${this.products?.id}`)
+  }
+
+  
+  back(): void {
+    this._location.back();
   }
 
 }

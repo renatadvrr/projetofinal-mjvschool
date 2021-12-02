@@ -1,4 +1,4 @@
-<div>
+<div class="container">
     <input type="text" placeholder="Ache um produto" (keyup)="searchByProducts($event)">
-    <app-products *ngFor="let item of filteredProducts" [products]="item" [card]="true"></app-products>
+    <app-products class="d-flex" *ngFor="let item of filteredProducts" [products]="item" [card]="true"></app-products>
 </div>

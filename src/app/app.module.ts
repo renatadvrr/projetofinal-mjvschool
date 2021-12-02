@@ -10,6 +10,7 @@ import { registerLocaleData } from '@angular/common';
 import { HomeModule } from './features/home/home.module';
 import { LoginModule } from './features/login/login.module';
 import { ProductsModule } from './features/products/products.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 registerLocaleData(localePt); 
 
@@ -25,7 +26,9 @@ registerLocaleData(localePt);
     SharedModule,
     HomeModule,
     LoginModule,
-    ProductsModule
+    ProductsModule,
+    FlexLayoutModule,
+    
   ],
   providers: [
     {

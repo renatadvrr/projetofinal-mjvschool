@@ -5,6 +5,9 @@ import { Products } from '../models/products.model';
   providedIn: 'root'
 })
 export class ProductsService {
+  getById(arg0: number) {
+    throw new Error('Method not implemented.');
+  }
   productsList: Array<Products> = [
     {
       id: 1, 
@@ -60,12 +63,56 @@ export class ProductsService {
 
   constructor() { }
 
-  getProducts() {
+  getDefaultProduct(): Products {
+    // const dateToday = moment().format('YYYY/MM/DD');
+    return {
+    id: this.generateNextId(),
+    nome: '',
+    tipo: '',
+    unidmedida:'',
+    quantidade:0,
+    produtor: '',
+    city: '',
+    contato: ''
+   }
+  }
+  getProduct() {
     return this.productsList;
   }
 
-  getById(id: number) {
-    return this.productsList.find((productsList) => productsList.id === id);
-  }
+  getProductByName(name: string) {
+     return this.productsList.find((productsList) => productsList.nome === name);
+   }
+   getProductById(id: number) {
+    return this.productsList.find((productsList) => productsList.id === Number(id));
+    }
 
+   getProductByFilterName(name: string) {
+     return this.productsList.filter((productsList) => productsList.nome.toUpperCase().search(name.toUpperCase()) > -1);
+   }
+
+   getProductByFilterId(id: number) {
+     const productsList = this.getProductById(Number(id));
+     if(!productsList) {
+       return [];
+     }
+     return [productsList];
+   }
+
+   createProduct(product: Products) {
+     this.productsList.push(product);
+     return this.productsList;
+   }
+
+
+   removeProduct(id: number) {
+     const productIndex = this.productsList.findIndex((product) => product.id === Number(id));
+     this.productsList.splice(productIndex, 1);
+   }
+
+   generateNextId(): number {
+     return this.productsList[(this.productsList.length - 1)].id + 1;
+   }
 }
+
+

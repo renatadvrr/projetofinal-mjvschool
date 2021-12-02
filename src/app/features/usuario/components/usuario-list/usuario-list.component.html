@@ -1,5 +1,5 @@
-<div>
-    <h3>Lista de Produtores</h3>
+<div class="container">
+    
     <input type="text" placeholder="Procure um produtor" (keyup)="searchByName($event)">
     <app-usuario *ngFor="let item of filteredProdutores" [usuario]='item'></app-usuario>
 </div>

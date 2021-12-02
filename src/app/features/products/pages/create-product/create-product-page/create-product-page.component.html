@@ -1,0 +1,50 @@
+<h3>Cadastre-se</h3>
+<form #productForm="ngForm" class="example-form" (submit)="onSubmit(productForm)">
+  <table class="example-full-width" cellspacing="10">
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Nome do produto</mat-label>
+          <input matInput type="text" name="nome" ngModel required>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Qual o tipo da variação desse produto?</mat-label>
+          <input matInput type="text" name="tipo" ngModel required>
+        </mat-form-field>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Como você mede esse produto</mat-label>
+          <input matInput placeholder="Ex. Dúzia" type="text" name="unidmedida" ngModel required>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Qual a quantidade você está oferencdo desse produto?</mat-label>
+          <input matInput  type="number" name="quantidade" ngModel required>
+        </mat-form-field>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Qual a cidade de entrega desse produto?</mat-label>
+          <input matInput type="text" name="city" ngModel required>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Qual o seu contato?</mat-label>
+          <input matInput type="text" name="contato" ngModel required>
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+  <div class="example-button-row action-form">
+    <button mat-raised-button type="submit" [disabled]="productForm.invalid" class="entrar">CASTRAR PRODUTO</button>
+  </div>
+</form>

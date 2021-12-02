@@ -31,7 +31,8 @@ import {MatInputModule} from '@angular/material/input';
   exports: [
     UsuarioComponent,
     UsuarioListComponent,
-    UsuariosComponent
+    UsuariosComponent,
+    CreateUsuarioPageComponent
   ]
 
 })
