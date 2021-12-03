@@ -31,8 +31,8 @@ export class CreateProductPageComponent implements OnInit {
 
     
     this.productService.createProduct(this.product);
-    alert('Sua conta foi criada com sucesso!');
-    this.router.navigateByUrl('login');
+    alert('O seu produto foi adicionado com sucesso!');
+    this.router.navigateByUrl('produtos');
   }
 
 }

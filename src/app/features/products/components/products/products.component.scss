@@ -1,15 +1,14 @@
 .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 80px;
-    
+  width: 100%;
+  max-width: 1200px;
+
 }
 .example-card {
     width: 300px;
-    margin: 20px 0;
-    padding: 20px;
-    
+    height: 100px;
+    margin: 0; 
+    padding: 20px 30px 60px 30px;
+ 
   }
   .buttom {
       background: #fff;
@@ -32,4 +31,17 @@ h3{
     padding: 30px 0;
     color: #fff;
     background: #7cad00;
+}
+.card-container{
+  float: left;
+  display: flex;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  border-radius: 5px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.card-container::after{
+content: "";
+display: table;
+clear: both;
 }

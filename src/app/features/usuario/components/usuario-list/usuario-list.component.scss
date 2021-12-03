@@ -1,11 +1,20 @@
+
+input {
+    border: 1px solid #e7e7e78a;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 295px;
+    display: flex;
+    margin: 60px 0;
+}
+app-usuario{
+    float: left;
+    
+}
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 80px;
-}
-input {
-    border: 2px solid #cdcdcd;
-    padding: 10px 15px;
-    width: 295px;
-}
+    }

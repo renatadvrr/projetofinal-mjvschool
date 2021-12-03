@@ -1,40 +1,37 @@
 
-    <div class="card" fxLayout="row wrap" fxLayoutGap="16px grid" *ngIf="card">
-        <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%">
-            <div class="mat-elevation-z4">
-                <mat-card class="example-card ">
-                    <mat-card-header>
-                        <mat-card-title>{{products?.nome}}</mat-card-title>
-                        <mat-card-subtitle>{{products?.tipo}}</mat-card-subtitle>
-                        <mat-card-subtitle>Quantidade: {{products?.quantidade}} {{products?.unidmedida}}
-                        </mat-card-subtitle>
-                    </mat-card-header>
-                    <mat-card-actions>
+            <div class="card-container" >
+                <div class="example-card " *ngIf="card">
+                    <div>
+                        <p>{{products?.nome}}</p>
+                        <p>{{products?.tipo}}</p>
+                        <p>Quantidade: {{products?.quantidade}} {{products?.unidmedida}}
+                        </p>
+                    </div>
+                    <div>
                         <button mat-button class="buttom" (click)="productDetails()">DETALHES DESTE PRODUTO</button>
-                    </mat-card-actions>
-                </mat-card>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+
 
     <div class="container card" *ngIf="!card">
-        <mat-card class="example-card ">
-            <mat-card-header>
-                <mat-card-title>Detalhes do produto</mat-card-title>
-                <mat-card-title>{{products?.nome}}</mat-card-title>
-                <mat-card-subtitle>{{products?.tipo}}</mat-card-subtitle>
+        <div class="example-card ">
+            <div>
+                <p>Detalhes do produto</p>
+                <p>{{products?.nome}}</p>
+                <p>{{products?.tipo}}</p>
 
-            </mat-card-header>
+            </div>
 
-            <mat-card-content>
+            <div>
                 <p>Quantidade desse produto: {{products?.quantidade}} {{products?.unidmedida}}
                 </p>
                 <p>Esse produto é da cidade de {{products?.city}}</p>
                 <p>Produtor: {{products?.produtor}} </p>
                 <P>Contato: {{products?.contato}}</P>
-            </mat-card-content>
-            <mat-card-actions>
+            </div>
+            <div>
                 <button mat-button class="buttom" (click)="back()">VOLTAR</button>
-            </mat-card-actions>
-        </mat-card>
+            </div>
+        </div>
     </div>
