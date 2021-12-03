@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Products } from '../../models/products.model';
 import {Location} from '@angular/common';
+import { Usuario } from 'src/app/features/usuario/models/usuario.model';
 
 
 @Component({
@@ -16,13 +17,33 @@ export class ProductsComponent implements OnInit {
 
   @Input()
   products?: Products;
+
+  usuario?: Usuario;
+  
+
+  // ngOnInit(): void {
+  //   const usuarioStorage = sessionStorage.getItem('usuario');
+  //   if(usuarioStorage) {
+  //     this.usuario = JSON.parse(usuarioStorage);
+  //   }
+  // }
+
+  // navigateByUrl(path: string) {
+  //   this.router.navigateByUrl(path);
+  // }
+
   
   constructor(
     private router: Router,
     private _location: Location) { }
 
   ngOnInit(): void {
+    const usuarioStorage = sessionStorage.getItem('usuario');
+    if(usuarioStorage) {
+      this.usuario = JSON.parse(usuarioStorage);
+    }
   }
+
 
   productDetails() {
   this.router.navigateByUrl(`produtos-details/${this.products?.id}`)
@@ -32,5 +53,7 @@ export class ProductsComponent implements OnInit {
   back(): void {
     this._location.back();
   }
-
+  navigateByUrl(path: string) {
+    this.router.navigateByUrl(path);
+  }
 }
